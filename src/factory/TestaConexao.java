@@ -1,0 +1,39 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package factory;
+
+import gui.JDialogCOff;
+import gui.JDialogTestConn;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+
+/**
+ *
+ * @author USuario
+ */
+public class TestaConexao {
+
+    public static void main(String[] args)
+            throws SQLException, ClassNotFoundException, Exception {
+       
+        try (Connection connection = new ConnectionFactory().getConnection()) {
+          
+           
+            JDialogTestConn v = new JDialogTestConn(null, true);
+            v.setVisible(true);
+            v.setModal(true);
+        } 
+        catch (RuntimeException n) {
+            JDialogCOff v = new JDialogCOff(null, true);
+            v.setVisible(true);
+            v.setModal(true);
+            
+        }
+
+
+
+    }
+}
