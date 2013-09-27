@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02/07/2013 03:06:14 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Hibernate.Imovelincra" table="imovelincra" catalog="programacao">
+        <id name="codIncra" type="string">
+            <column name="Cod_Incra" length="12" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="nome" type="string">
+            <column name="Nome" length="45" />
+        </property>
+        <property name="municipio" type="string">
+            <column name="Municipio" length="45" not-null="true" />
+        </property>
+        <property name="comarca" type="string">
+            <column name="Comarca" length="45" not-null="true" />
+        </property>
+        <property name="uf" type="string">
+            <column name="UF" length="45" not-null="true" />
+        </property>
+        <property name="matricula" type="string">
+            <column name="Matricula" length="45" not-null="true" />
+        </property>
+        <property name="Area" type="string">
+            <column name="&#193;rea" length="45" not-null="true" />
+        </property>
+        <property name="tipoProcesso" type="string">
+            <column name="TipoProcesso" length="45" not-null="true" />
+        </property>
+        <property name="nomeArquivo" type="string">
+            <column name="NomeArquivo" length="65535" not-null="true" />
+        </property>
+        <property name="demais" type="string">
+            <column name="Demais" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

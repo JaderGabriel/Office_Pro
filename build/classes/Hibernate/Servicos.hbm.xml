@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02/07/2013 03:06:14 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Hibernate.Servicos" table="servicos" catalog="programacao">
+        <id name="codS" type="java.lang.Integer">
+            <column name="CodS" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="descricao" type="string">
+            <column name="Descricao" length="50" not-null="true" />
+        </property>
+        <property name="valor" type="big_decimal">
+            <column name="Valor" precision="10" />
+        </property>
+        <property name="moeda" type="string">
+            <column name="Moeda" length="45" />
+        </property>
+        <property name="comentarios" type="string">
+            <column name="Comentarios" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

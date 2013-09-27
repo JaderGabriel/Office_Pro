@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02/07/2013 03:06:14 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="modelo.Proprietario" table="proprietario" catalog="programacao">
+        <id name="idProprietario" type="java.lang.Integer">
+            <column name="ID_Proprietario" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="nome" type="string">
+            <column name="Nome" length="45" not-null="true" />
+        </property>
+        <property name="cpfcnpj" type="string">
+            <column name="CPFCNPJ" length="15" not-null="true" unique="true" />
+        </property>
+        <property name="rg" type="string">
+            <column name="RG" length="15" not-null="true" unique="true" />
+        </property>
+        <property name="logradouro" type="string">
+            <column name="Logradouro" length="10" />
+        </property>
+        <property name="end" type="string">
+            <column name="End" length="45" />
+        </property>
+        <property name="nro" type="string">
+            <column name="Nro" length="5" />
+        </property>
+        <property name="complemento" type="string">
+            <column name="Complemento" length="45" />
+        </property>
+        <property name="bairro" type="string">
+            <column name="Bairro" length="25" />
+        </property>
+        <property name="cidade" type="string">
+            <column name="Cidade" length="25" />
+        </property>
+        <property name="uf" type="string">
+            <column name="UF" length="25" />
+        </property>
+        <property name="cep" type="string">
+            <column name="CEP" length="9" />
+        </property>
+        <property name="telefoneF" type="string">
+            <column name="TelefoneF" length="13" />
+        </property>
+        <property name="tefeloneC" type="string">
+            <column name="TefeloneC" length="13" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="senha" type="string">
+            <column name="senha" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
