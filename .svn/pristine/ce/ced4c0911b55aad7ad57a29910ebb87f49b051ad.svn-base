@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02/07/2013 03:06:14 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Hibernate.Proprietarioimovel2" table="proprietarioimovel2" catalog="programacao">
+        <composite-id name="id" class="Hibernate.Proprietarioimovel2Id">
+            <key-property name="idProprietario" type="int">
+                <column name="ID_Proprietario" />
+            </key-property>
+            <key-property name="matricula" type="string">
+                <column name="Matricula" length="45" />
+            </key-property>
+        </composite-id>
+        <property name="demais" type="string">
+            <column name="Demais" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>
